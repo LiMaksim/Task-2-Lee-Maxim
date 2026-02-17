@@ -1,0 +1,49 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter Movie Title: ");
+        string movieTitle = Console.ReadLine();
+
+        Console.Write("Enter Number of Tickets: ");
+        int numberOfTickets = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter Price per Ticket: ");
+        double pricePerTicket = double.Parse(Console.ReadLine());
+
+        Console.Write("Enter Duration of Movie in hours: ");
+        double durationHours = double.Parse(Console.ReadLine());
+
+        Console.Write("Enter Screen Number: ");
+        int screenNumber = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter First Letter of Seat Row: ");
+        char seatRow = Console.ReadLine()[0];
+
+        Console.Write("Is it a 3D Movie (true/false): ");
+        bool is3D = bool.Parse(Console.ReadLine());
+
+        double totalTicketCost = numberOfTickets * pricePerTicket;
+        double costPerHour = totalTicketCost / durationHours;
+
+        Console.WriteLine("\nEntered Values:");
+        Console.WriteLine($"Movie Title: {movieTitle}");
+        Console.WriteLine($"Number of Tickets: {numberOfTickets}");
+        Console.WriteLine($"Price per Ticket: {pricePerTicket}");
+        Console.WriteLine($"Duration of Movie (hours): {durationHours}");
+        Console.WriteLine($"Screen Number: {screenNumber}");
+        Console.WriteLine($"First Letter of Seat Row: {seatRow}");
+        Console.WriteLine($"Is 3D Movie: {is3D}");
+
+        Console.WriteLine("\nData Types:");
+        Console.WriteLine($"Type of numberOfTickets: {numberOfTickets.GetType()}");
+        Console.WriteLine($"Type of pricePerTicket: {pricePerTicket.GetType()}");
+        Console.WriteLine($"Type of is3D: {is3D.GetType()}");
+
+        Console.WriteLine("\nCalculations:");
+        Console.WriteLine($"Total Ticket Cost: {totalTicketCost}");
+        Console.WriteLine($"Cost per Hour of Movie: {costPerHour}");
+    }
+}
